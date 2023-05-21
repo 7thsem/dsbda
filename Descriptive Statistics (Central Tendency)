@@ -1,0 +1,55 @@
+import pandas as pd
+import numpy as np
+from sklearn import preprocessing
+
+df=pd.read_csv("Employee_Salary.csv")
+
+df.mean()
+
+df.mean(axis=1)[0:4]
+
+df.mode()
+
+df.loc[:,'Age'].mode()
+
+df.min()
+
+df.loc[:,'Age'].min(skipna = False)
+
+df.max()
+
+df.loc[:,'Age'].min(skipna = False)
+
+df.std()
+
+df.loc[:,'Age'].std()
+
+df.std(axis=1)[0:4]
+
+df.loc[5:10,'Salary'].std()
+
+df.groupby(['Gender'])['Age'].mean()
+
+df
+
+df['Gender'].unique()
+
+label_encoder = preprocessing.LabelEncoder()
+df['Gender'] = label_encoder.fit_transform(df['Gender'])
+df['Gender'].unique()
+
+enc= preprocessing.OneHotEncoder()
+enc_df = pd.DataFrame(enc.fit_transform(df[['Gender']]).toarray())
+enc_df
+
+df_u=df.rename(columns = {'Salary' : 'Income'}, inplace = False)
+(df_u.groupby(['Gender']).Income.mean())
+
+from sklearn import preprocessing
+enc = preprocessing.OneHotEncoder()
+enc_df = pd.DataFrame(enc.fit_transform(df[['Gender']]).toarray())
+enc_df
+
+df_encode = df_u.join(enc_df)
+df_encode
+
