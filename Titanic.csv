@@ -1,0 +1,12 @@
+survived,pclass,sex,age,sibsp,parch,fare,embarked,class,who,adult_m
+0,3,M,22,1,0,7.25,S,1st,Man,Ti
+1,1,F,33,1,0,71.23,C,2nd,Women,Fa
+1,3,M,67,0,0,21.23,S,3rd,Man,Fa
+1,1,M,89,1,0,52.12,C,2nd,Man,Fa
+0,3,F,90,1,0,14.12,S,3rd,women,Fa
+0,1,M,78,0,0,85.12,S,1st,man,Ti
+1,3,M,67,0,0,45.12,S,4th,man,ti
+0,1,F,89,1,0,96.13,C,7th,women,Ti
+1,3,F,34,0,0,96.1,C,9th,women,Ti
+0,1,F,21,1,0,74.12,S,5th,women,Ti
+1,3,M,43,0,0,63.12,S,9th,man,Fa
