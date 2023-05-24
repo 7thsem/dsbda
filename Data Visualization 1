@@ -18,18 +18,17 @@ sns.jointplot(x='age', y='fare', data=dataset, kind='hex')
 plt.show()
 
 dataset = dataset.dropna()
-plt.show()
-
 sns.pairplot(dataset, hue='sex')
 plt.show()
 
 sns.rugplot(dataset['fare'])
 plt.show()
 
+sns.barplot(x='sex', y='age', data = dataset)
+plt.show()
+
 import numpy as np
-
 import matplotlib.pyplot as plt
-
 import seaborn as sns
 
 sns.barplot(x='sex', y='age', data=dataset, estimator=np.std)
@@ -65,6 +64,12 @@ sns.swarmplot(x='sex', y='age', data=dataset)
 plt.show()
 
 sns.swarmplot(x='sex', y='age', data=dataset, hue='survived')
+plt.show()
+
+sns.swarmplot(x='sex', y='age', data=dataset, hue='survived' , split=True)
+plt.show()
+
+sns.swarmplot(x='sex', y='age', data=dataset, color='black')
 plt.show()
 
 sns.violinplot(x='sex', y='age', data=dataset)
